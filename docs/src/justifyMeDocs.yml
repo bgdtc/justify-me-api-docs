@@ -1,0 +1,58 @@
+---
+openapi: 3.0.0
+info:
+  title: Mon API de justification de texte
+  version: 1.0.0
+  description: API permettant de justifier un texte en alignant les mots sur une
+    largeur donnée.
+servers:
+  - url: http://localhost:3000/
+paths:
+  /tokens:
+    post:
+      summary: Endpoint pour obtenir un token d'accès à l'API.
+      responses:
+        "200":
+          description: Token généré avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        "429":
+          description: Trop de requêtes ont été effectuées récemment.
+    x-rate-limits:
+      - rateLimit:
+          windowMs: 60000
+          max: 100
+          standardHeaders: true
+          legacyHeaders: false
+  /justify:
+    post:
+      summary: Endpoint pour justifier un texte.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: Le texte à justifier.
+              required:
+                - text
+      responses:
+        "200":
+          description: Texte justifié avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  justifiedText:
+                    type: string
+        "400":
+          description: La requête est mal formée.
