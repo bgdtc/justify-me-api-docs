@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.e18c2256.js",
-    "static/js/787.d37de791.chunk.js": "/static/js/787.d37de791.chunk.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.e18c2256.js.map": "/static/js/main.e18c2256.js.map",
-    "787.d37de791.chunk.js.map": "/static/js/787.d37de791.chunk.js.map"
+    "main.css": "/justify-me-api-docs/static/css/main.e6c13ad2.css",
+    "main.js": "/justify-me-api-docs/static/js/main.3aea8b55.js",
+    "static/js/787.d37de791.chunk.js": "/justify-me-api-docs/static/js/787.d37de791.chunk.js",
+    "index.html": "/justify-me-api-docs/index.html",
+    "main.e6c13ad2.css.map": "/justify-me-api-docs/static/css/main.e6c13ad2.css.map",
+    "main.3aea8b55.js.map": "/justify-me-api-docs/static/js/main.3aea8b55.js.map",
+    "787.d37de791.chunk.js.map": "/justify-me-api-docs/static/js/787.d37de791.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e18c2256.js"
+    "static/js/main.3aea8b55.js"
   ]
 }
