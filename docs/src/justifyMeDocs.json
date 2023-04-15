@@ -74,19 +74,8 @@
             "bearerAuth": []
           }
         ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "text",
-            "schema": {
-              "type": "string"
-            },
-            "required": false,
-            "description": "Le texte à justifier en tant que chaîne de caractères"
-          }
-        ],
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -96,7 +85,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "description": "Le texte à justifier en tant que chaîne de caractères"
             }
           }
         },
@@ -104,9 +94,9 @@
           "200": {
             "description": "Texte justifié avec succès",
             "content": {
-              "application/json": {
+              "text/plain": {
                 "schema": {
-                  "type": "object",
+                  "type": "string",
                   "properties": {
                     "justifiedText": {
                       "type": "string"
